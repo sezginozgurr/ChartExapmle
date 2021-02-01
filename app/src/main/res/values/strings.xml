@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BarChartExample</string>
+    <string name="liberty">LIBERTY</string>
+    <string name="and"> &amp; </string>
+    <string name="passage">PASSAGE</string>
+    <string name="my_temperature">MY TEMPERATURE</string>
+    <string name="celcius">Celcius</string>
+    <string name="farenheit">Farenheit</string>
+    <string name="next">NEXT</string>
+    <string name="donate">Donate</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="invite">Invite</string>
+    <string name="all_donate">All Donate</string>
+    <string name="total_donate">Total Donate</string>
+    <string name="oraganiation">Oraganiation</string>
+</resources>
