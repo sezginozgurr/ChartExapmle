@@ -18,7 +18,8 @@ class BarChart2 : AppCompatActivity() {
     private lateinit var binding: ActivityBarChart2Binding
     val dataValues: ArrayList<BarEntry> = arrayListOf()
     val dataValues2: ArrayList<BarEntry> = arrayListOf()
-    val days = listOf("Pzts", "Sali", "Cars", "Pers", "Cuma", "Cmrt", "Pazar")
+    val days =
+        listOf("Pzts", "Salı", "Carş", "Perş", "Cuma", "Cmrt", "Pazar", "Pzts", "Salı", "Çarş")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,9 @@ class BarChart2 : AppCompatActivity() {
         dataValues.add(BarEntry(4f, 3000f))
         dataValues.add(BarEntry(5f, 6000f))
         dataValues.add(BarEntry(6f, 7000f))
+        dataValues.add(BarEntry(7f, 2000f))
+        dataValues.add(BarEntry(8f, 6000f))
+        dataValues.add(BarEntry(9f, 4000f))
         return dataValues
     }
 
@@ -46,6 +50,9 @@ class BarChart2 : AppCompatActivity() {
         dataValues2.add(BarEntry(4f, 2000f))
         dataValues2.add(BarEntry(5f, 1000f))
         dataValues2.add(BarEntry(6f, 5000f))
+        dataValues2.add(BarEntry(7f, 4000f))
+        dataValues2.add(BarEntry(8f, 7000f))
+        dataValues2.add(BarEntry(9f, 1000f))
         return dataValues2
     }
 
@@ -61,6 +68,7 @@ class BarChart2 : AppCompatActivity() {
         val xAxis = binding.barChart.xAxis
         xAxis.valueFormatter = IndexAxisValueFormatter(days)
         xAxis.setCenterAxisLabels(true)
+        xAxis.labelCount = 5
         xAxis.position = XAxis.XAxisPosition.BOTTOM
         xAxis.granularity = 1f
         xAxis.isGranularityEnabled = true
@@ -74,14 +82,14 @@ class BarChart2 : AppCompatActivity() {
 
         binding.barChart.xAxis.axisMaximum = 0f
         binding.barChart.xAxis.mAxisMaximum =
-            0 + binding.barChart.barData.getGroupWidth(groupSpace, barSpace) * 5
+            0 + binding.barChart.barData.getGroupWidth(groupSpace, barSpace) * 10 // Todo * dan sonrasi tabloda kaç gün göstermek istediğin.. Dolayısıyla barwidthleri de ayarlamak zorundasın.
 
         binding.barChart.groupBars(0f, groupSpace, barSpace)
 
         val description = Description()
         description.text = ""
         binding.barChart.description = description
-        binding.barChart.animateXY(2000,2000)
+        binding.barChart.animateXY(2000, 2000)
         binding.barChart.invalidate()
     }
 }

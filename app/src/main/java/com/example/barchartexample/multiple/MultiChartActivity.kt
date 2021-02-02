@@ -62,7 +62,7 @@ class MultiChartActivity : AppCompatActivity() {
 
         lineDataset1.lineWidth = 3f
         lineDataset1.color = Color.RED //Todo rota rengini degistirir
-        lineDataset1.setCircleColors(R.color.colorFarenheit) //Todo rota rengini degistirir'
+        lineDataset1.setCircleColors(R.color.colorFarenheit) //Todo rota circle rengini degistirir'
         lineDataset1.circleRadius = 5f //Todo yuvarlagin boyu
         lineDataset1.circleHoleRadius = 5f //Todo yuvarlagin icini boyarr
         lineDataset1.lineWidth = 3f
