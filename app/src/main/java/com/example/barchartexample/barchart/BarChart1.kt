@@ -127,6 +127,7 @@ class BarChart1 : AppCompatActivity() {
         binding.barChartView.groupBars(0f, groupSpace, barSpace)
         binding.barChartView.setFitBars(true)
         binding.barChartView.data.isHighlightEnabled = false
+        binding.barChartView.animateXY(1500,1500)
         binding.barChartView.invalidate()
 
         // set bar label

@@ -81,6 +81,7 @@ class BarChart2 : AppCompatActivity() {
         val description = Description()
         description.text = ""
         binding.barChart.description = description
+        binding.barChart.animateXY(2000,2000)
         binding.barChart.invalidate()
     }
 }

@@ -82,6 +82,7 @@ class MultiChartActivity : AppCompatActivity() {
 
         val data = LineData(dataSets)
         binding.lineChart.data = data
+        binding.lineChart.animateXY(2000,2000)
         binding.lineChart.invalidate()
     }
 
